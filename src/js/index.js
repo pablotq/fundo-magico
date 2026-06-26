@@ -26,19 +26,19 @@ document.addEventListener('DOMContentLoaded', function () {
             const data = await response.json();
             console.log(data);
 
-            htmlCode.textContent = data[0].code;
-            cssCode.textContent = data[0].style;
+            htmlCode.textContent = data.code || "";
+            cssCode.textContent = data.style || "";
 
             preview.style.display = 'block';
-            preview.innerHTML = data[0].preview;
+            preview.innerHTML = data.preview || "";
 
             let styleTag = document.getElementById('dynamic-style');
             if (styleTag) styleTag.remove();
 
-            if(data[0].style){
+            if(data.style){
                 styleTag = document.createElement('style');
                 styleTag.id = 'dynamic-style';
-                styleTag.textContent = data[0].style;
+                styleTag.textContent = data.style;
                 document.head.appendChild(styleTag);
             }
 
