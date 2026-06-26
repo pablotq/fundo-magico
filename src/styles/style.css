@@ -28,7 +28,7 @@ body {
 .container{
     max-width: 1024px;
     margin: 0 auto;
-    z-index: 99;
+    z-index: 98;
     position: relative;
 }
 
@@ -37,8 +37,6 @@ body {
     border-radius: 16px;
     padding: 32px;
     margin-bottom: 32px;
-    /* z-index: 99;
-    position: relative; */
 }
 
 .card-header{
